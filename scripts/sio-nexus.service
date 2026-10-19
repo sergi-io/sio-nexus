@@ -1,0 +1,23 @@
+# SIO Nexus Systemd Service File
+# This file defines a systemd service for running the SIO Nexus application.
+# It ensures that the application starts on boot and restarts automatically if it crashes.
+# To use this service:
+# 1. Save this file as /etc/systemd/system/sio-nexus.service
+# 2. Reload systemd to recognize the new service: sudo systemctl daemon-reload
+# 3. Enable the service to start on boot: sudo systemctl enable sio-nexus
+# 4. Start the service: sudo systemctl start sio-nexus
+
+[Unit]
+Description=SIO Nexus
+After=network.target
+
+[Service]
+ExecStart=/home/sortegam/sio-nexus/sio-nexus run
+WorkingDirectory=/home/sortegam/sio-nexus
+Restart=always
+RestartSec=5
+User=sortegam
+CPUAffinity=6 7
+
+[Install]
+WantedBy=multi-user.target

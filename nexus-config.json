@@ -1,0 +1,56 @@
+{
+  "secondsBufferFlushToDB": 10, // Number of seconds to buffer closed klines before flushing to the database
+  "sqliteKlinesDBPath": "./data/klines.db", // Path to the SQLite database file
+  "marketScanner": {
+    "enabled": true,
+    "sourceExchangeId": "binance",
+    "tradableExchangeId": "phemex",
+    "marketTypes": ["swap", "future"],
+    "statsWindowMs": 60000,
+    "publishIntervalMs": 1000,
+    "subscribeDelayMs": 25
+  },
+  "aggregatedPairs": {
+    "SOLUSDT": [
+      { "exchangeId": "binance", "pairs": ["SOL/USDT", "SOL/USDC"] },
+      {
+        "exchangeId": "binanceusdm",
+        "pairs": ["SOL/USDT:USDT", "SOL/USDC:USDC"],
+        "mainPriceTracker": true
+      },
+      { "exchangeId": "coinbase", "pairs": ["SOL/USDT", "SOL/USDC", "SOL/USD", "SOL/USDC:USDC"] },
+      {
+        "exchangeId": "bitget",
+        "pairs": ["SOL/USDT", "SOL/USDC", "SOL/USDT:USDT", "SOL/USDC:USDC"]
+      },
+      { "exchangeId": "gate", "pairs": ["SOL/USDT", "SOL/USDC", "SOL/USDT:USDT"] },
+      {
+        "exchangeId": "okx",
+        "pairs": [
+          "SOL/USDT",
+          "SOL/USDC",
+          "SOL/USD",
+          "SOL-USDT-SWAP",
+          "SOL/USD:USD",
+          "SOL/USDT:USDT"
+        ]
+      },
+      { "exchangeId": "mexc", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "huobi", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "phemex", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "aster", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "bitfinex", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "bitmex", "pairs": ["SOL/USDT", "SOL/USDT:USDT"] },
+      { "exchangeId": "kraken", "pairs": ["SOL/USDT", "SOL/USD", "SOL/USDC"] },
+      { "exchangeId": "bybit", "pairs": ["SOL/USDT", "SOL/USDC", "SOL/USDT:USDT"] },
+      { "exchangeId": "bitstamp", "pairs": ["SOL/USD:USD"] },
+      { "exchangeId": "hitbtc", "pairs": ["SOL/USDT:USDT"] },
+      { "exchangeId": "poloniex", "pairs": ["SOL/USDT"] },
+      { "exchangeId": "deribit", "pairs": ["SOL/USDC", "SOL/USDC:USDC"] },
+      { "exchangeId": "dydx", "pairs": ["SOL/USDC:USDC"] },
+      { "exchangeId": "kucoin", "pairs": ["SOL-USDT", "SOL-USDC"] },
+      { "exchangeId": "kucoinfutures", "pairs": ["SOL/USDT:USDT", "SOL/USDC:USDC"] },
+      { "exchangeId": "hyperliquid", "pairs": ["SOL/USDC:USDC"] }
+    ]
+  }
+}

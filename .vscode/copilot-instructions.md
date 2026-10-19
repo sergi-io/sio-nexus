@@ -1,0 +1,4 @@
+- Be concise.
+- This is a Tick and Klines ingestor backend server called SIO-Nexus.
+- The code should be written in TypeScript and be blazingly fast.
+- It uses Bun instead of Node or npm.
